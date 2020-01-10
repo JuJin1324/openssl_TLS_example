@@ -27,7 +27,7 @@ Client가 서버로 부터 전달받은 공개키(public key)를 통하여 서�
 [생활코딩 - HTTPS와 SSL 인증서](https://opentutorials.org/course/228/4894)
 
 ## openssl
-* 설명 : 전자상거래 방식의 세계 표준으로 사용되는 안전 전송규약으로 전송시 암호화하는 SSL (Secure Socket Layer), 
+전자상거래 방식의 세계 표준으로 사용되는 안전 전송규약으로 전송시 암호화하는 SSL (Secure Socket Layer), 
 전송 계층 보안 TTL(Transfer Layer Security)를 구현한 공개 소프트웨어. C언어 라이브러리 포함되어있음. 
 * 설치 
     - macOS : `brew install openssl`
