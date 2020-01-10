@@ -21,11 +21,11 @@ int main(void) {
     /* 3. 연결 생성 및 시작 */
     bio = BIO_new_connect("localhost:43211");
     if (bio == NULL) {
-        printf("Error to make BIO object.");
+        printf("Error to make BIO object.\n");
         return EXIT_FAILURE;
     }
     if (BIO_do_connect(bio) <= 0) {
-        printf("Error to make connect.");
+        printf("Error to make connect.\n");
         return EXIT_FAILURE;
     }
 
@@ -34,7 +34,7 @@ int main(void) {
     /* 5. 연결 WRITE */
     if (BIO_write(bio, buf, (int) strlen(buf)) <= 0) {
         if (BIO_should_retry(bio)) {
-            printf("Can't retry BIO_write");
+            printf("Can't retry BIO_write\n");
             return EXIT_FAILURE;
         }
         /* Do something to handler retry */
@@ -52,11 +52,11 @@ int main(void) {
      */
     int x = BIO_read(bio, buf, MAX_BUF_SIZE);
     if (x == 0) {
-        printf("Connection closed.");
+        printf("Connection closed.\n");
 //        return EXIT_FAILURE;
     } else if (x < 0) {
         if (!BIO_should_retry(bio)) {
-            printf("Can't retry BIO_read.");
+            printf("Can't retry BIO_read.\n");
             return EXIT_FAILURE;
         }
         /* Do something to handle retry */
