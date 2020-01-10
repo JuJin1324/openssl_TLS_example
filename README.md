@@ -38,6 +38,11 @@ OpenSSL에서 파일과 소켓을 포함한 다양한 종류의 통신을 보안
 * 파일 I/O 및 소켓 I/O 모두 처리가능한 라이브러리
 * SSL 보안 혹은 비보안 방식으로 선택하여 통신 가능
 
+### CMake 설정
+CMakeLists.txt 수정 사항 : openSSL 라이브러리 사용을 위한 경로 변수인 OPENSSL_DIR을 자신의 디렉토리에 맞게 수정 요함.
+* macOS HomeBrew를 통해서 openssl을 설치한 경우 대부분의 경로는 `cd /usr/local/Cellar/openssl` 후 버전을 확인해서 버전까지의 경로를 적으면 된다. 
+* 예시 : `set(OPENSSL_DIR /usr/local/Cellar/openssl/1.0.2t)`
+
 ## 인증서 발급
 openssl을 사용하여 테스트를 위한 사설 인증서를 발급한다. 터미널 작업이며 아래 명령어들은 터미널에서 `openssl`로 openssl 접속 이후에 실행하거나
 앞에 openssl 접속하지 않고 사용할 시에 명령어 앞에 `openssl`을 붙여서 실행한다.

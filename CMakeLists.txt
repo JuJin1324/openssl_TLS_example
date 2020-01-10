@@ -8,16 +8,6 @@ include_directories(
         ${OPENSSL_DIR}/include
 )
 
-#add_executable(ssl_client.out
-#        src/ssl_client.c
-#        )
-#target_link_libraries(ssl_client.out -L${OPENSSL_DIR}/lib ssl crypto)
-#
-#add_executable(ssl_server.out
-#        src/ssl_server.c
-#        )
-#target_link_libraries(ssl_server.out -L${OPENSSL_DIR}/lib ssl crypto)
-
 add_executable(bio_client.out
         src/bio/bio_client.c
         )
